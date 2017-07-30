@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+	<script src="{{url_for('static',filename='jquery.min.js')}}"></script>
+	<script src="{{url_for('static',filename='bootstrap.min.js')}}"></script>
+</head>
+<body>
+	<h1>How Playing {{name}}</h1>
+	<audio controls id="audioplayer">
+	<source src="../static/Enrique Iglesias - Heart Attack.mp3" type="audio/mpeg">
+	</audio>
+	<input type="range" id="seek" value="0" max=""/>
+	<button onclick="setCurTime()" type="button">Set time position to 20 seconds</button><br> 
+	<script>
+		//var element = document.getElementById('audioPlayer');
+
+		//first make sure the audio player is playing
+		//element.play(); 
+		//second seek to the specific time you're looking for
+		//element.currentTime = 20;
+		var aud = document.getElementById("audioplayer");
+		function setCurTime() { 
+			aud.currentTime=20;
+		} 
+	</script>
+</body>
